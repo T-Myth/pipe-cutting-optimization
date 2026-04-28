@@ -216,5 +216,5 @@ $$\quad P \ge X_{ik} + A_{il} - 1$$
 ### Python 环境
 ```bash
 pip install gurobipy
-python QCP.py      # Gurobi 可求解二次约束（需完整许可证）
-python MILP.py     # 纯 MILP，学术许可即可
+python MIQCP.py      # Gurobi 可求解二次约束（需完整许可证）
+python MILP_binary.py     # 纯 MILP，学术许可即可
