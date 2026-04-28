@@ -1,0 +1,69 @@
+Gurobi Optimizer version 12.0.0 build v12.0.0rc1 (win64 - Windows 11+.0 (26200.2))
+
+CPU model: 12th Gen Intel(R) Core(TM) i7-12650H, instruction set [SSE2|AVX|AVX2]
+Thread count: 10 physical cores, 16 logical processors, using up to 16 threads
+
+Optimize a model with 15 rows, 20 columns and 54 nonzeros
+Model fingerprint: 0xad85ad04
+Model has 4 quadratic constraints
+Variable types: 0 continuous, 20 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+02]
+  QMatrix range    [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+00, 3e+01]
+  RHS range        [5e+00, 2e+03]
+  QRHS range       [2e+01, 3e+01]
+Presolve time: 0.00s
+Presolved: 51 rows, 37 columns, 134 nonzeros
+Presolved model has 16 bilinear constraint(s)
+
+Solving non-convex MIQCP
+
+Variable types: 1 continuous, 36 integer (0 binary)
+
+Root relaxation: objective 8.250000e+00, 43 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    8.25000    0   13          -    8.25000      -     -    0s
+H    0     0                      33.0000000    8.25000  75.0%     -    0s
+H    0     0                      32.0000000    8.25000  74.2%     -    0s
+     0     0    9.54571    0   25   32.00000    9.54571  70.2%     -    0s
+H    0     0                      29.9000000    9.54571  68.1%     -    0s
+     0     0    9.54571    0   26   29.90000    9.54571  68.1%     -    0s
+     0     0   15.20190    0   41   29.90000   15.20190  49.2%     -    0s
+     0     0   20.68000    0    6   29.90000   20.68000  30.8%     -    0s
+H    0     0                      24.1000000   20.68000  14.2%     -    0s
+     0     0   20.68000    0    5   24.10000   20.68000  14.2%     -    0s
+     0     0   20.68000    0    5   24.10000   20.68000  14.2%     -    0s
+     0     0   20.68000    0    7   24.10000   20.68000  14.2%     -    0s
+     0     0   20.68000    0    8   24.10000   20.68000  14.2%     -    0s
+     0     0   20.68000    0    8   24.10000   20.68000  14.2%     -    0s
+H    0     0                      22.5000000   20.68000  8.09%     -    0s
+     0     2   20.68000    0    8   22.50000   20.68000  8.09%     -    0s
+H   44    13                      21.9000000   21.18000  3.29%   7.8    0s
+H   45    13                      21.8000000   21.18000  2.84%   8.0    0s
+H   54    10                      21.7000000   21.22000  2.21%   7.8    0s
+H   60    10                      21.5000000   21.22000  1.30%   7.4    0s
+
+Cutting planes:
+  Gomory: 1
+  MIR: 10
+  StrongCG: 5
+  Zero half: 1
+  RLT: 10
+
+Explored 82 nodes (664 simplex iterations) in 0.07 seconds (0.01 work units)
+Thread count was 16 (of 16 available processors)
+
+Solution count 9: 21.5 21.7 21.8 ... 33
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.150000000000e+01, best bound 2.150000000000e+01, gap 0.0000%
+目标值: 21.500000000000004
+模式1: [1,2,0,2] 使用 14 次
+模式2: [0,0,5,0] 使用 4 次
+模式3: [2,0,1,2] 使用 1 次
+模式4: [0,3,1,1] 使用 0 次
