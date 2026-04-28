@@ -30,9 +30,9 @@
 | 文件 | 方法 | 工具 | 算法类型 | 核心技术 |
 |------|------|------|----------|----------|
 | `nonlinear.m` | **原始非线性排序模型 + 遗传算法** | MATLAB `ga` | 启发式 | 直接计算排序后的前四大加权和作为适应度 |
-| `convex.m` | **大M排除法 MILP** | MATLAB `intlinprog` | 精确 | 引入 0‑1 指示变量 `z` 和大 M 约束，将前四大提取转化为线性不等式 |
+| `MILP_bigM.m` | **大M排除法 MILP** | MATLAB `intlinprog` | 精确 | 引入 0‑1 指示变量 `z` 和大 M 约束，将前四大提取转化为线性不等式 |
 | `MIQCP.py` | **排序约束 + 二次约束模型** | Python + Gurobi | 精确（非凸） | 直接令 $x_1\ge x_2\ge x_3\ge x_4$，但含有 $x_i\cdot a_{ip}$ 二次项 |
-| `MILP.py` | **二进制展开完全线性化 MILP** | Python + Gurobi | 精确 | 将整数变量二进制展开，线性化所有二次项，转化为纯 0‑1 线性规划 |
+| `MILP_binary.py` | **二进制展开完全线性化 MILP** | Python + Gurobi | 精确 | 将整数变量二进制展开，线性化所有二次项，转化为纯 0‑1 线性规划 |
 
 ---
 
@@ -86,7 +86,7 @@ $$I_i \le N_i \quad \forall i$$
 
 ---
 
-### 2. convex.m – 大M排除法 MILP
+### 2. MILP_bigM.m – 大M排除法 MILP
 
 **完整优化模型**：
 
@@ -167,7 +167,7 @@ $$x_1 \ge x_2 \ge x_3 \ge x_4$$
 
 ---
 
-### 4. MILP.py – 二进制展开线性化 MILP
+### 4. MILP_binary.py – 二进制展开线性化 MILP
 
 将 `MIQCP.py` 中的二次项 **完全线性化**，得到纯 0‑1 线性规划。
 
@@ -211,7 +211,7 @@ $$\quad P \ge X_{ik} + A_{il} - 1$$
 
 ### MATLAB 环境
 1. 安装 **MATLAB R2020a+** 及 **Optimization Toolbox**
-2. 运行 `nonlinear.m` 或 `convex.m`
+2. 运行 `nonlinear.m` 或 `MILP_bigM.m`
 
 ### Python 环境
 ```bash
