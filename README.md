@@ -201,10 +201,17 @@ $$\quad P \ge X_{ik} + A_{il} - 1$$
 
 所有精确方法均稳定收敛到同一全局最优目标值 **21.5**。
 
-- **GA 启发式**：在多数运行中找到 21.5，但偶尔偏离，且运行结果有波动。
-- **大M MILP**：精确求解，结果完全可复现。
-- **二进制展开 MILP**：变量数多但利用 Gurobi 可在数秒内求解。
+| 方法 | 最优值 | 求解时间 | 稳定性 | 结果文件 |
+|------|--------|----------|--------|----------|
+| GA (nonlinear.m) | 21.5 (多数) | ~2s | 偶尔偏离 | `result/GA_1.png` ~ `GA_5.png`，`result/GA_result.pdf` |
+| 大M MILP (MILP_bigM.m) | 21.5 | <1s | 完全稳定 | `result/MILP_bigM_result.png` |
+| MIQCP (MIQCP.py) | 21.5 | <0.1s | 完全稳定 | `result/MIQCp_result.txt` |
+| 二进制 MILP (MILP_binary.py) | 21.5 | <0.1s | 完全稳定 | `result/MIQP_binary_result.txt` |
 
+- **GA 启发式**：多次运行结果见 `result/GA_1.png` ~ `GA_5.png`，多数收敛到 21.5，但迭代过程存在波动，偶尔偏离最优解。
+- **大M MILP**：精确求解，结果完全可复现，详见 `result/MILP_bigM_result.png`。
+- **MIQCP**：Gurobi 直接求解二次约束模型，输出见 `result/MIQCp_result.txt`。
+- **二进制 MILP**：线性化后纯 MILP，输出见 `result/MIQP_binary_result.txt`。
 ---
 
 ## 如何运行
