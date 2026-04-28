@@ -137,7 +137,7 @@ $$t_4 \ge N_i - M z_{3i} \quad \forall i$$
 **完整优化模型**：
 
 - **变量**：
-  - $x_i \in [0,30]$ 整数：第 $i$ 种模式的使用次数（$i=1..4$，强制降序）
+  - $x_i \in [0,30]$ 整数：第 $i$ 种模式的使用次数（ $i=1..4$ ，强制降序）
   - $a_i, b_i, c_i, d_i \in [0,5]$ 整数：模式 $i$ 生产的四种产品数量
 
 - **目标函数**：
@@ -211,13 +211,13 @@ $$\quad P \ge X_{ik} + A_{il} - 1$$
 - **GA 启发式**：多次运行结果见 `result/GA_1.png` ~ `GA_5.png`，多数收敛到 21.5，但迭代过程存在波动，偶尔偏离最优解。
 - **大M MILP**：精确求解，结果完全可复现，详见 `result/MILP_bigM_result.png`。
 - **MIQCP**：Gurobi 直接求解二次约束模型，输出见 `result/MIQCP_result.txt`。
-- **二进制 MILP**：线性化后纯 MILP，输出见 `result/MIQP_binary_result.txt`。
+- **二进制 MILP**：线性化后纯 MILP，输出见 `result/MILP_binary_result.txt`。
 ---
 
 ## 如何运行
 
 ### MATLAB 环境
-1. 安装 **MATLAB R2020a+** 及 **Optimization Toolbox**
+1. 安装 **MATLAB R2024a+** 及 **Optimization Toolbox**
 2. 运行 `nonlinear.m` 或 `MILP_bigM.m`
 
 ### Python 环境
