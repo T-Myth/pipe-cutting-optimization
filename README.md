@@ -205,12 +205,12 @@ $$\quad P \ge X_{ik} + A_{il} - 1$$
 |------|--------|----------|--------|----------|
 | GA (nonlinear.m) | 21.5 (多数) | ~2s | 偶尔偏离 | `result/GA_1.png` ~ `GA_5.png`，`result/GA_result.pdf` |
 | 大M MILP (MILP_bigM.m) | 21.5 | <1s | 完全稳定 | `result/MILP_bigM_result.png` |
-| MIQCP (MIQCP.py) | 21.5 | <0.1s | 完全稳定 | `result/MIQCp_result.txt` |
-| 二进制 MILP (MILP_binary.py) | 21.5 | <0.1s | 完全稳定 | `result/MIQP_binary_result.txt` |
+| MIQCP (MIQCP.py) | 21.5 | <0.1s | 完全稳定 | `result/MIQCP_result.txt` |
+| 二进制 MILP (MILP_binary.py) | 21.5 | <0.1s | 完全稳定 | `result/MILP_binary_result.txt` |
 
 - **GA 启发式**：多次运行结果见 `result/GA_1.png` ~ `GA_5.png`，多数收敛到 21.5，但迭代过程存在波动，偶尔偏离最优解。
 - **大M MILP**：精确求解，结果完全可复现，详见 `result/MILP_bigM_result.png`。
-- **MIQCP**：Gurobi 直接求解二次约束模型，输出见 `result/MIQCp_result.txt`。
+- **MIQCP**：Gurobi 直接求解二次约束模型，输出见 `result/MIQCP_result.txt`。
 - **二进制 MILP**：线性化后纯 MILP，输出见 `result/MIQP_binary_result.txt`。
 ---
 
