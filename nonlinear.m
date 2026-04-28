@@ -7,19 +7,13 @@ b = [5; 1850;-1750];
 % 初始化切割模式矩阵
 results_matrix = [];
 % 循环遍历所有结果
-for x1 = 0:5
-    for x2 = 0:5
-        for x3 = 0:5
-            for x4 = 0:5
-                x = [x1 x2 x3 x4]'; % 组合向量
-                % 检查是否满足所有约束条件
-                if all(A*x <= b)
-                    results_matrix = [results_matrix;x'];
-                end
-            end
-        end
+for x1 = 0:5,for x2 = 0:5,for x3 = 0:5,for x4 = 0:5
+    x = [x1 x2 x3 x4]'; % 组合向量
+    % 检查是否满足所有约束条件
+    if all(A*x <= b)
+        results_matrix = [results_matrix;x'];
     end
-end
+end; end; end; end
 %定义决策变量，分别为四种模式下四种产品生产数，xij 为第 i 中模型生成的第 j 种产品个数，NMi 为第 i 中模式使用次数，xj 为二元变量，表示选择第 j 种模式，共 22 个决策变量
 A = [ones(1,11),zeros(1,11);
     eye(11),-1*eye(11);
