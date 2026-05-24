@@ -78,7 +78,7 @@ $$\sum_{i=1}^{11} I_i \le 4$$
 
 $$\sum_{i=1}^{11} N_i \cdot a_{ip} \ge d_p \quad p=1,2,3,4$$
 
-$$N_i \le 30 I_i \quad \forall i$$
+$$N_i \le M I_i \quad \forall i$$
 
 $$I_i \le N_i \quad \forall i$$
 
