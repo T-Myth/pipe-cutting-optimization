@@ -106,7 +106,7 @@ $$\sum_{i=1}^{11} I_i \le 4$$
 
 $$\sum_{i=1}^{11} N_i a_{ip} \ge d_p \quad p=1,2,3,4$$
 
-$$N_i \ge I_i,\; N_i \le 30 I_i \quad \forall i$$
+$$N_i \ge I_i,\; N_i \le M I_i \quad \forall i$$
 
 **排序指示变量定义**
 
@@ -116,7 +116,7 @@ $$z_{1i} \le z_{2i} \le z_{3i} \quad \forall i$$
 
 **最大值标记（大M）**
 
-$$N_i \ge N_j - M(1 - z_{1i}) \quad \forall i,j \qquad (M=100)$$
+$$N_i \ge N_j - M(1 - z_{1i}) \quad \forall i,j $$
 
 **前四大线性提取（排除法）**
 
